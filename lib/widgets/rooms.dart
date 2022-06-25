@@ -1,5 +1,6 @@
 import 'package:facebook_ui_clone/config/palette.dart';
 import 'package:facebook_ui_clone/models/models.dart';
+import 'package:facebook_ui_clone/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class Room extends StatelessWidget {
@@ -25,11 +26,14 @@ class Room extends StatelessWidget {
                 child: _CreateRoomButton(),
               );
             }
-            return Container(
-                margin: const EdgeInsets.all(8.0),
-                height: 20.0,
-                width: 20.0,
-                color: Colors.red);
+            final User user = onlineUsers[index - 1];
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: ProfileAvatar(
+                imageUrl: user.imageUrl,
+                isActive: true,
+              ),
+            );
           },
         ));
   }
