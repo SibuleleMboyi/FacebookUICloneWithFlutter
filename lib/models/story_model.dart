@@ -2,7 +2,7 @@ import 'package:facebook_ui_clone/models/models.dart';
 
 class Story {
   final User user;
-  final String? imageUrl;
+  final String imageUrl;
   final bool isViewed;
 
   const Story({

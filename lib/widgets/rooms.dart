@@ -32,6 +32,7 @@ class Room extends StatelessWidget {
               child: ProfileAvatar(
                 imageUrl: user.imageUrl,
                 isActive: true,
+                //hasBorder: true,
               ),
             );
           },
